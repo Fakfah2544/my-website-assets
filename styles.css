@@ -1,0 +1,240 @@
+/* General Styling */
+body {
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  /* background-color: #f9f9f9; */
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Page Title */
+.head-page {
+  font-weight: 600;
+  margin: 20px 0;
+  font-size: 60px;
+  color: #333;
+}
+
+.head-page-br {
+  height: 7px;
+  width: 80%;
+  max-width: 1100px;
+  background-color: #7ad3d8;
+  margin: 20px auto;
+}
+
+/* Button Styling */
+.animate-btn {
+  font-weight: bold;
+  padding: 15px 20px;
+  font-size: 14px;
+  color: #495057;
+  background-color: white;
+  border-radius: 8px;
+  border: 2px solid #50d3d5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px 5px rgba(29, 29, 29, 0.5);
+}
+
+.animate-btn:hover {
+  color: white;
+  background-color: #0ee7f2;
+  border-color: #0ee7f2;
+  opacity: 0.9;
+  transform: scale(1.1);
+}
+
+/* Image Button */
+.pic-button {
+  filter: drop-shadow(-2px 13px 2px grey);
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.pic-button:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* Centering Images */
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* gap: 42px; */
+  margin-top: 50px;
+}
+
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 230px;
+}
+
+.image-wrapper span {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 15px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.image-wrapper:hover span {
+  color: #00a8a9;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 600px) {
+  .head-page {
+    font-size: 50px;
+  }
+
+  .head-page-br {
+    width: 90%;
+  }
+
+  .image-container {
+    gap: 15px;
+  }
+
+  .carousel-container-row {
+    gap: 15px;
+  }
+
+  .image-wrapper {
+    width: 100%;
+  }
+
+  .pic-button {
+    width: 100px;
+  }
+
+  .image-wrapper span {
+    font-size: 16px;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+
+/* Container holding the carousel */
+.carousel-container-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* gap: 42px; */
+    margin-top: 50px;
+  }
+
+.carousel-container {
+  position: relative;
+  max-width: 30%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-container p{
+    font-family: "Kanit", sans-serif bold;
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 0px;
+    transition: all 0.3s ease;
+}
+
+.carousel-container:hover p{
+    color: #00a8a9;
+}
+
+/* The carousel container holds the slides */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Each slide occupies 100% of the container width */
+.carousel-slide {
+  min-width: 100%;
+  transition: 0.5s;
+}
+
+/* Ensure images are responsive */
+.carousel-slide img {
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-slide img:hover {
+    transform: scale(1.1);
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+  }
+
+/* Left and right arrow buttons */
+.prev,.next {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Position of the buttons */
+.prev {
+  left: 0px;
+}
+
+.next {
+  right: 0px;
+}
+
+/* Hover effect on buttons */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+/* Dots section */
+.dots {
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+}
+
+/* Each dot */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #0ee7f2;
+}
+
+/* Style for active dot (the current slide) */
