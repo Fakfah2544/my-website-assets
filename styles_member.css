@@ -1,0 +1,109 @@
+* {
+    font-family: "Bitter", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    width: 100%;
+}
+
+.member-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.member-cards-container a {
+    text-decoration: none;
+}
+
+.member-cards {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(50% - 20px); /* แบ่งครึ่งเพื่อให้ได้สองคอลัมน์ */
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.member-cards:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.details {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.contact {
+    font-size: 14px;
+    color: #999;
+    text-align: left;
+}
+
+.copy-btn {
+    font-family: "Bitter", sans-serif;
+    background-color: #f0f0f0;
+    border: none;
+    color: #007BFF;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    text-decoration: underline;
+    transform: scale(1.03);
+}
+
+.title-container {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding-left: 0;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+.title-flex {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.small-card {
+    width: auto;
+    padding: 10px 20px;
+    text-decoration: none;
+}
